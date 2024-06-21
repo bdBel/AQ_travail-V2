@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
-public class Fibonacci_Sequence {
+public class ApplicationFibonacci {
+
     public static void main(String[] args) {
 
      //Affiche un menu en boucle avec les options demandeés
