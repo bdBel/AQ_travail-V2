@@ -1,82 +1,6 @@
 import java.util.Scanner;
 
 public class Fibonacci_Sequence {
-    public static void main(String[] args) {
-
-     //Affiche un menu en boucle avec les options demandeés
-
-         while (true) {
-            Scanner scan = new Scanner(System.in);
-            int tache = choixMenu();
-            if (tache == 4) {
-                System.out.println("Fin, merci d'avoir utilisé notre programme");
-                break;
-            }
-            calculSequenceFibonacci(tache);
-        }
-    }
-
-    /**
-     * @return
-     */
-     //méthode pour retourner la tâche choisie
-        public static int choixMenu() {
-        Scanner scan = new Scanner(System.in);
-        int tache;
-        System.out.println(" Calculs de la séquence Fibonacci et tests de la vitesse d'éxecution : \n");
-        System.out.println("Menu\n");
-        System.out.println("1. Caclul de la séquence Fibonacci avec une boucle");
-        System.out.println("2. Calcul de la séquence Fibonacci avec la méthode récursive");
-        System.out.println("3. Calcul du Temps d'execution avec chaque méthode");
-        System.out.println("4. Quitter\n ");
-        System.out.println("Faites votre choix.");
-
-        tache = scan.nextInt();
-        if (tache < 1 || tache > 4) {
-            System.out.println("Option invalide, choisir l'item");
-        }
-        return tache;
-    }
-
-   //methode switch pour executer la tâche choisie
-
-    public static void calculSequenceFibonacci(int tache) {
-        Scanner scan = new Scanner(System.in);
-        System.out.println("entrer le nombre de termes voulus dans ls séquence : ");
-        int nbChiffres = scan.nextInt();
-        switch (tache) {
-
-            case 1:
-                System.out.println("Sequence Fibonacci calculée pour " + nbChiffres + " chiffres avec l'utilisation d'une boucle : ");
-                int[] sequenceBoucle = fibonacciBoucle(nbChiffres);
-                afficherSequence(sequenceBoucle);
-                pauseToContinue(scan);
-                scan.nextLine();
-                System.out.println("\n");
-                break;
-
-            case 2:
-                System.out.println("Séquence Fibonacci calculée pour " + nbChiffres + " chiffres avec la méthode recursive : ");
-                int[] sequenceRecursive = fibonacciMethodeRecursive(nbChiffres);
-                afficherSequence(sequenceRecursive);
-                System.out.println("\n");
-                pauseToContinue(scan);
-                scan.nextLine();
-                break;
-
-            case 3:
-                System.out.println("Résultat de la comparaison des temps d'execution de chaque méthode pour le nombre " + nbChiffres + " de chiffres ");
-                calculTempsExecution(nbChiffres);
-                System.out.println("\n");
-                pauseToContinue(scan);
-                scan.nextLine();
-                break;
-
-            default:
-                System.out.println("Valeur invalide entrée");
-                break;
-        }
-    }
 
     /**
      * @param nbChiffres
@@ -122,15 +46,15 @@ public class Fibonacci_Sequence {
     //Méthode pour afficher les séquences
     public static void afficherSequence(int[] sequence) {
         for (int i = 0;i < sequence.length;i++) {
-        System.out.print(sequence[i]+ " ");
+            System.out.print(sequence[i]+ " ");
         }
-      }
+    }
 
     /** Calcul du temps d'execution en nanosecondes pour chaque méthode
      * @param nbChiffres : le nombre de termes pour lequel la vitesse de temps d'exécution de la séquence est calculée
      */
 
-     //Méthode pour calculer lde temps d'éxecution pour chaque méthode (boucle ou récursif et comparer les résulats.)
+    //Méthode pour calculer lde temps d'éxecution pour chaque méthode (boucle ou récursif et comparer les résulats.)
 
     public static void calculTempsExecution(int nbChiffres) {
         System.out.println("Temps d'execution pour la mméthode avec boucle pour " + nbChiffres + " chiffres :");
@@ -156,9 +80,9 @@ public class Fibonacci_Sequence {
     }
 
     /* Affiche un message indiquant à  l'utilisateur d'appuyer sur Entrée
-            * pour Continuer
-            * @param scan: Le scanner permet de lire le choix utilisateur.
-            */
+     * pour Continuer
+     * @param scan: Le scanner permet de lire le choix utilisateur.
+     */
 
     //faire une pausse après l'affichage du résultat
 
@@ -167,3 +91,4 @@ public class Fibonacci_Sequence {
         scan.nextLine(); // Wait for Enter key press
     }
 }
+
