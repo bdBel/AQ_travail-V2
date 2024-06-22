@@ -80,8 +80,8 @@ public class ApplicationFibonacci {
     }
 
     /**
-     * @param nbChiffres
-     * @return
+     * @param nbChiffres le nombre de termes dans la séquence Fibonacci
+     * @return un tableau d'entiers, la suite Fibonacci
      */
 
     public static int[] fibonacciBoucle(int nbChiffres) {
