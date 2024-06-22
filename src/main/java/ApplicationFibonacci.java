@@ -18,7 +18,7 @@ public class ApplicationFibonacci {
     }
 
     /**
-     * @return
+     * @retourne un entier qui est le choix de l'utilisateur
      */
      //méthode pour retourner la tâche choisie
         public static int choixMenu() {
