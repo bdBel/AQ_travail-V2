@@ -66,7 +66,7 @@ public class Fibonacci_Sequence {
             break;
 
         case 3:
-            System.out.println("Résultat de la comparaison des temps d'execution de chaque méthode pour le nombre " + nbChiffres + " de chiffres ");
+            System.out.println("Résultat de la comparaison des temps d'execution de chaque méthode pour le nombre " + nbChiffres);
             calculTempsExecution(nbChiffres);
             System.out.println("\n");
             pauseToContinue(scan);
@@ -140,12 +140,11 @@ public static void afficherSequence(int[] sequence) {
 
 //Méthode pour calculer lde temps d'éxecution pour chaque méthode (boucle ou récursif et comparer les résulats.)
 public static void calculTempsExecution(int nbChiffres) {
-    System.out.println("Temps d'execution pour la mméthode avec boucle pour " + nbChiffres + " chiffres :");
     long startTime = System.nanoTime();
     fibonacciBoucle(nbChiffres);
     long endTime = System.nanoTime();
     long tempsExec = endTime - startTime;
-    System.out.println("le temps d'execution pour la méthode boucle est de :\n " + tempsExec);
+    System.out.println("le temps d'execution pour le nombre " + nbChiffres + " avec la méthode BOUCLE est de :\n " + tempsExec + " nanosecondes.");
 
     System.out.println("----------------------------------------------------------------------------------------");
 
@@ -153,8 +152,7 @@ public static void calculTempsExecution(int nbChiffres) {
     fibonacciMethodeRecursive(nbChiffres);
     long endTime1 = System.nanoTime();
     long tempsExec1 = endTime1 - startTime1;
-    System.out.println("Temps d'execution avec la méthode récursive pour " + nbChiffres + " chiffres : ");
-    System.out.println(tempsExec1);
+    System.out.println("le temps d'execution pour le nombre " + nbChiffres + " avec la méthode RÉCURSIVE est de :\n " + tempsExec1 + " nanosecondes.");
     if (tempsExec - tempsExec1 > 0) {
         System.out.println("Meilleure performance pour la méthode récursive ! ");
     } else {
