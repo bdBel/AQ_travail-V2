@@ -34,27 +34,27 @@ public class Fibonacci_Sequence {
 
             case 1:
                 System.out.println("Sequence Fibonacci calculée pour " + nbChiffres + " chiffres avec l'utilisation d'une boucle : ");
-                int[] sequenceBoucle = Fibonacci_Sequence.fibonacciBoucle(nbChiffres);
-                Fibonacci_Sequence.afficherSequence(sequenceBoucle);
-                Fibonacci_Sequence.pauseToContinue(scan);
+                int[] sequenceBoucle = fibonacciBoucle(nbChiffres);
+                afficherSequence(sequenceBoucle);
+                pauseToContinue(scan);
                 scan.nextLine();
                 System.out.println("\n");
                 break;
 
             case 2:
                 System.out.println("Séquence Fibonacci calculée pour " + nbChiffres + " chiffres avec la méthode recursive : ");
-                int[] sequenceRecursive = Fibonacci_Sequence.fibonacciMethodeRecursive(nbChiffres);
-                Fibonacci_Sequence.afficherSequence(sequenceRecursive);
+                int[] sequenceRecursive = fibonacciMethodeRecursive(nbChiffres);
+                afficherSequence(sequenceRecursive);
                 System.out.println("\n");
-                Fibonacci_Sequence.pauseToContinue(scan);
+                pauseToContinue(scan);
                 scan.nextLine();
                 break;
 
             case 3:
                 System.out.println("Résultat de la comparaison des temps d'execution de chaque méthode pour le nombre " + nbChiffres + " de chiffres ");
-                Fibonacci_Sequence.calculTempsExecution(nbChiffres);
+                calculTempsExecution(nbChiffres);
                 System.out.println("\n");
-                Fibonacci_Sequence.pauseToContinue(scan);
+                pauseToContinue(scan);
                 scan.nextLine();
                 break;
 
@@ -63,7 +63,6 @@ public class Fibonacci_Sequence {
                 break;
         }
     }
-
 
     /**
      * @param nbChiffres

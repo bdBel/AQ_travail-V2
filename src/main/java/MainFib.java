@@ -13,6 +13,4 @@ public class MainFib {
              Fibonacci_Sequence.calculSequenceFibonacci(tache);
         }
     }
-
-
 }
